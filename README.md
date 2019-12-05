@@ -9,6 +9,13 @@ Get snowfall on your website. HTML 5 canvas animation
 - Easily customize by editing constants
 - Change speed, color, density
 
+
+# Preview
+
+<img src="https://i.imgur.com/PIEEjGo.gif"/>
+
+<a href="https://iam.engineer/demo/snowfall.html">Live Demo</a>
+
 # How to use?
 
 1. Copy snowfall.js to your directory.
@@ -21,7 +28,8 @@ Get snowfall on your website. HTML 5 canvas animation
 
 # How to customize?
 
-Add a `<script>` block below the 2 lines. Then alter the paramenters as necessary
+Add a `<script>` block below the 2 lines. Then alter the paramenters as necessary.
+
 **Remeber to always call invalidate() method after editing the paramenters**
 
 ## Editable paramenters:
@@ -34,3 +42,5 @@ Add a `<script>` block below the 2 lines. Then alter the paramenters as necessar
 - **\_snowMaxXVel** : Maximum speed in horizontal direction
 - **\_snowMinYVel** : Minimum vertical speed
 - **\_snowMaxYVel** : Maximum vertical speed
+
+Check index.html for a sample on how to implement as well as how to customize
