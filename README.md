@@ -6,7 +6,7 @@ Get snowfall on your website. HTML 5 canvas animation
 
 - Set as background for any webpage
 - Automatically adapts to different screen sizes
-- Easily customize by editing constants
+- Customize directly from HTML
 - Change speed, color, density
 
 
@@ -19,7 +19,7 @@ Get snowfall on your website. HTML 5 canvas animation
 # How to use?
 
 1. Copy snowfall.js to your directory.
-2. Add the following code at the bottom of your HTML body.
+2. Add the following code at the bottom of your HTML `<body>`.
 
 ```
 <canvas id="snowfall"></canvas>
@@ -28,11 +28,11 @@ Get snowfall on your website. HTML 5 canvas animation
 
 # How to customize?
 
-Add a `<script>` block below the 2 lines. Then alter the paramenters as necessary.
+Add a `<script>` block below the 2 lines. Then alter the parameters as necessary.
 
-**Remeber to always call invalidate() method after editing the paramenters**
+**Remember to always call invalidate() method after editing the parameters.**
 
-## Editable paramenters:
+## Editable parameters:
 
 - **\_snowColor** : Snow color
 - **\_snowBg** : Background color
@@ -43,4 +43,4 @@ Add a `<script>` block below the 2 lines. Then alter the paramenters as necessar
 - **\_snowMinYVel** : Minimum vertical speed
 - **\_snowMaxYVel** : Maximum vertical speed
 
-Check index.html for a sample on how to implement as well as how to customize
+Check index.html for a sample on how to implement as well as how to customize.
