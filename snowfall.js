@@ -21,6 +21,10 @@ function initCanvas() {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   canvas.style.backgroundColor = bg;
+  canvas.style.position = "fixed";
+  canvas.style.left = "0";
+  canvas.style.top = "0";
+  canvas.style.zIndex = "-1";
 }
 
 function Snow(x, y, dx, dy, radius) {
