@@ -8,17 +8,35 @@
         color: white;
         font-size: 4em;
         font-weight: lighter;
-        position: fixed;
-        textalign: center;
-        left: 50%;
-        top: 50%;
+      }
+      p {
+        color: white;
       }
     </style>
   </head>
   <body>
-    <h1>snowfall.js</h1>
+    <center>
+      <h1>snowfall.js</h1>
+      <p>Enjoy the snow</p>
+      <a href="https://github.com/s-praveen-kumar/snowfall-animation/"
+        >Check out on Github</a
+      >
+    </center>
     <!--Insert the following 2 lines in your code-->
     <canvas id="snowfall"></canvas>
     <script src="snowfall.js"></script>
+
+    <!-- To customize default paramenters-->
+    <script type="text/javascript">
+      _snowColor = "#ddd9";
+      _snowBg = "#070b34";
+      _snowCount = 200;
+      _snowMinRadius = 1;
+      _snowMaxRadius = 5;
+      _snowMaxXVel = 0.5;
+      _snowMinYVel = 0.5;
+      _snowMaxYVel = 2;
+      invalidate();
+    </script>
   </body>
 </html>

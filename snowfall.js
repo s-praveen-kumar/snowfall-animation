@@ -1,17 +1,16 @@
-const snowColor = "#ddd9";
-const bg = "#070b34";
-const snowCount = 200;
-const minRadius = 1;
-const maxRadius = 5;
-const maxXVel = 0.5;
-const minYVel = 0.5;
-const maxYVel = 2;
+let _snowColor = "#ddd9";
+let _snowBg = "#070b34";
+let _snowCount = 200;
+let _snowMinRadius = 1;
+let _snowMaxRadius = 5;
+let _snowMaxXVel = 0.5;
+let _snowMinYVel = 0.5;
+let _snowMaxYVel = 2;
 
 const canvas = document.querySelector("#snowfall");
 const c = canvas.getContext("2d");
 window.addEventListener("resize", () => {
-  initCanvas();
-  initDrawing();
+  invalidate();
 });
 
 function randomRange(min, max) {
@@ -20,7 +19,7 @@ function randomRange(min, max) {
 function initCanvas() {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
-  canvas.style.backgroundColor = bg;
+  canvas.style.backgroundColor = _snowBg;
   canvas.style.position = "fixed";
   canvas.style.left = "0";
   canvas.style.top = "0";
@@ -38,7 +37,7 @@ function Snow(x, y, dx, dy, radius) {
 Snow.prototype.render = function() {
   c.beginPath();
   c.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-  c.fillStyle = snowColor;
+  c.fillStyle = _snowColor;
   c.fill();
 };
 
@@ -49,17 +48,17 @@ Snow.prototype.update = function() {
 };
 
 function createSnow(start) {
-  let radius = randomRange(minRadius, maxRadius);
+  let radius = randomRange(_snowMinRadius, _snowMaxRadius);
   let x = randomRange(radius, canvas.width - radius);
   let y = randomRange(start ? -1000 : 30, 0);
-  let dx = randomRange(-maxXVel, maxXVel);
-  let dy = randomRange(minYVel, maxYVel);
+  let dx = randomRange(-_snowMaxXVel, _snowMaxXVel);
+  let dy = randomRange(_snowMinYVel, _snowMaxYVel);
   return new Snow(x, y, dx, dy, radius);
 }
 let snowArray;
 function initDrawing() {
   snowArray = [];
-  for (let i = 0; i < snowCount; i++) {
+  for (let i = 0; i < _snowCount; i++) {
     snowArray.push(createSnow(true));
   }
 }
@@ -82,6 +81,10 @@ function animate() {
     }
   });
 }
-initCanvas();
-initDrawing();
+
+function invalidate() {
+  initCanvas();
+  initDrawing();
+}
+invalidate();
 animate();
