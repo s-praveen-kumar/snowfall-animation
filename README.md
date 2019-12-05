@@ -16,5 +16,5 @@ Get snowfall on your website. HTML 5 canvas animation
 
 ```
 <canvas id="snowfall"></canvas>
-<script src="snowfall.js" charset="utf-8"></script>
+<script src="snowfall.js"></script>
 ```
